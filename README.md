@@ -17,8 +17,8 @@ Zähle alle `e`s in einem Text.
 ## Aufgabe 04
 
 Zähle alle Wörter in einem Text.
-
-## Aufgabe 05
+{
+## Aufgabe 05                                                                                               }
 
 Schreibe eine Funktion, die testet, ob in einem Text mindestens ein
 Grossbuchstabe vorkommt.

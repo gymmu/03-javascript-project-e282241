@@ -191,16 +191,22 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    if (input.length !== 7) return false
+    if (input[0] !== "#") return false
+
+    for (let i = 1; i < input.length; i++) {
      const currentElement = input[i]
+     const ascii = currentElement.charCodeAt(0)
+     if (48 <= ascii && ascii <= 57) {
+      //mache nichts ist; ist eine Zahl
+     }else if (65 <= ascii && ascii <= 70) {
+      //mache nichts; ist A-F
+     }else {
+      return false
+     }
 
-
-     
-     
+    }
   }
-  return result.join("") 
-  }
-  
 
   export function aufgabe11(args) {
     const input = args
@@ -467,9 +473,4 @@ export function aufgabe06(args) {
      
      
   }
-  return result.join("") 
   }
-  
-
- 
-  
