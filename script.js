@@ -112,17 +112,34 @@ export function aufgabe01(args) {
 
 export function aufgabe06(args) {
     const input = args
-    const result = []
+    
 
-    for (let i = 0; i < input.length; i++) {
+    for (let i = 1; i < input.length; i++) {
      const currentElement = input[i]
+     const ascii = currentElement.charCodeAt(0)
      
+     if (48<= ascii && ascii <= 57) {
+      //mache nichts ist; ist eine Zahl
+    
+    }else if (65<= ascii && ascii <= 90) {
+      //mache nichts; ist A-Z
+    
+    }else if (97<= ascii && ascii <= 122) {
+    //mache nichts; ist a-z
 
-     
-     
-  }
-  return result.join("") 
-  }
+    }else if (currentElement=== " ") {
+    
+    } else {
+      return true
+     }
+    }
+     return false
+    }
+
+   
+
+
+ 
   
 
   export function aufgabe07(args) {
@@ -131,21 +148,20 @@ export function aufgabe06(args) {
 
     for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
-     if(currentElement==="und") {}
-     else if(currentElement=== ""){}
 
-
-
-     
-     
-  }
-  
-  
-  
-  return result.join("") 
+     if(currentElement === "u") {
+      if (input[i+1]=== "n") {
+        if (input[i+2]=== "d") {
+          return true
+         }
+       } 
+     }
+    }
+  return false
 }
-  
+
  
+
   export function aufgabe08(args) {
     const input = args
     const result = []
@@ -189,7 +205,6 @@ export function aufgabe06(args) {
 
   export function aufgabe10(args) {
     const input = args
-    const result = []
 
     if (input.length !== 7) return false
     if (input[0] !== "#") return false
@@ -204,9 +219,10 @@ export function aufgabe06(args) {
      }else {
       return false
      }
-
     }
-  }
+     return true
+    }
+  
 
   export function aufgabe11(args) {
     const input = args
