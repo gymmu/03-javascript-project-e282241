@@ -274,16 +274,18 @@ export function aufgabe06(args) {
 
   export function aufgabe14(args) {
     const input = args
-    const result = []
+    let countE = 0
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
-
-
-     
-     
+     if (currentElement === 'e' ) {
+      countE = countE + 1
+      if (countE === 3) {
+        return i 
+      }
+    }
   }
-  return 2
+  return -1
   }
   
 
@@ -291,50 +293,32 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
-
-
      
-     
-  }
+     //erkennt ein Leerzeichen und bricht danach ab
+     if (currentElement=== ' ') {
+      return result.join("")
+     }
+
+     //wenn kein Leerzeichen erkannt wird, dann normal weiter
+     result.push(currentElement)
+
+ }
   return result.join("") 
   }
   
 
-  export function aufgabe16(args) {
-    const input = args
-    const result = []
-
-    for (let i = 0; i < input.lenght; i++) {
-     const currentElement = input[i]
-
-
-     
-     
-  }
-  return result.join("") 
-  }
+ 
   
-  export function aufgabe17(args) {
-    const input = args
-    const result = []
-
-    for (let i = 0; i < input.lenght; i++) {
-     const currentElement = input[i]
-
-
-     
-     
-  }
-  return result.join("") 
-  }
   
+
+    
   export function aufgabe18(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
