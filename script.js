@@ -309,9 +309,21 @@ export function aufgabe06(args) {
   }
   
 
- 
-  
-  
+
+export function aufgabe17(args) {
+  const input = args
+  const result = input.split(',')
+
+  for (let i = 0; i < result.length - 1; i++) {
+   for (let j = 0; j < result.length - 1 - i;j++) {
+    if (result[j] > result[j + 1]) {
+
+      [result[j], result[j + 1]] = [result[j + 1], result[j]]
+    }
+  }
+}  
+  return result.join(',')
+}
 
     
   export function aufgabe18(args) {
@@ -333,7 +345,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -348,7 +360,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -363,7 +375,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -378,7 +390,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -393,7 +405,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -407,7 +419,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -422,7 +434,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -437,7 +449,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -452,7 +464,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -466,7 +478,7 @@ export function aufgabe06(args) {
     const input = args
     const result = []
 
-    for (let i = 0; i < input.lenght; i++) {
+    for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
 
@@ -474,3 +486,35 @@ export function aufgabe06(args) {
      
   }
   }
+
+  export function bubbleSort (args) {
+ 
+    const text = args
+    const list = text.split("")
+                                   
+                             
+
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i + 1]
+      if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      
+
+
+        const tmp = list[i + 1]
+
+        list[i + 1] = list[i]
+
+        list[i] = tmp
+        i = -1 
+      }
+    }
+
+    const result = list.join("")
+    console.log(result)
+
+    return result
+
+  }
+ 
+
